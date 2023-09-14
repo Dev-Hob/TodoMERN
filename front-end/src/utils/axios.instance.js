@@ -1,9 +1,9 @@
 import axios from "axios";
 
 const instance = axios.create({
-    baseURL: '44.229.200.200',
+    baseURL: 'https://todo-backend-9cyp.onrender.com',
     headers: {
-    "Access-Control-Allow-Origin": 'http://localhost:3000'
+    "Access-Control-Allow-Origin": '44.229.200.200'
     },
     withCredentials: true,
     });
