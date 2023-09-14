@@ -1,4 +1,4 @@
-import { Stack, Heading, Flex, Box, Spacer } from "@chakra-ui/react";
+import { Stack, Heading, Flex, Spacer } from "@chakra-ui/react";
 import SignIn from "../components/sign-in/sign-in.component";
 import SignUp from "../components/sign-up/sign-up.component";
 

@@ -1,5 +1,5 @@
 import { SimpleGrid } from "@chakra-ui/react";
-import React, { memo, useCallback, useContext } from "react";
+import React, { memo, useContext } from "react";
 import CardTodoComponent from "../card-todo/card-todo.component";
 import { useNavigate } from "react-router-dom";
 import { TodoContext } from "../../context/todo";
@@ -11,12 +11,12 @@ function CardList({todos}) {
   const toast = useToast();
   const { dispatch } = useContext(TodoContext);
 
-  const editTodoHandler = useCallback((id) => {
+  const editTodoHandler = (id) => {
     // goto edit page with todo id
     navigate("/todo/edit", { state: {_id: id} });
-  }, []);
+  };
 
-  const deleteTodoHandler = useCallback(async (id, name) => {
+  const deleteTodoHandler = async (id, name) => {
     try{
       await instance({
         url: `/todo/delete/${id}`,
@@ -41,7 +41,7 @@ function CardList({todos}) {
     
     }
     // goto edit page with todo id
-  }, []);
+  };
 
   return (
     <SimpleGrid
