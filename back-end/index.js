@@ -11,7 +11,7 @@ const app = express()
 const port = 3001
 const dbURI = process.env.dbURI;
 app.use(express.json());
-const ExactHostname = "http://localhost:3000"
+const ExactHostname = "https://melodious-sorbet-9c8d04.netlify.app/"
 app.use('*', cors({ origin: ExactHostname, credentials: true }))
 app.use(cookieParser());
 
