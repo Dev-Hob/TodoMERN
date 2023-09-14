@@ -21,7 +21,6 @@ function SignIn() {
   const { username, password } = formFields;
   const { loading, error, dispatch, defaultErrorHandler } = useContext(AuthContext);
   const navigate = useNavigate();
-  console.log(error);
   const onChangeHandler = useCallback(
     (e) => {
       if (error) defaultErrorHandler();
