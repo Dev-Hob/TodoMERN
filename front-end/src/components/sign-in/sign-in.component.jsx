@@ -54,7 +54,7 @@ function SignIn() {
       });
   };
 
-  const disable = username === "" || password === "";
+  const disable = username === "" || password === "" || loading;
   return (
     <>
       <FormControl width={{base: '90%',md: "90%", lg:'35%'}}  isInvalid={error}>
